@@ -26,6 +26,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         borderTopRightRadius: 30,
-        borderTopLeftRadius: 30,
+        borderTopLeftRadius: 30
     }
 });
