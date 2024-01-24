@@ -1,12 +1,17 @@
-import { StyleSheet, View, StatusBar } from 'react-native';
+import { StyleSheet, View, StatusBar, Text } from 'react-native';
+import { Typography } from '../components';
 
-export default function MainContainer() {
+export default function MainContainer({children}) {
     return (
         <View style={styles.container}>
             <StatusBar
                 backgroundColor="#3629B7"
             />
+            <View style={styles.title}>
+                <Typography color={'#fff'} size={18} type={600}>Log in</Typography>
+            </View>
             <View style={styles.subContainer}>
+                {children}
             </View>
         </View>
     )
@@ -20,12 +25,15 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-end',
     },
     subContainer: {
-        minHeight: '85%',
+        maxHeight: '85%',
         width: '100%',
         backgroundColor: '#fff',
         alignItems: 'center',
         justifyContent: 'center',
-        borderTopRightRadius: 30,
-        borderTopLeftRadius: 30
+        borderTopRightRadius: 40,
+        borderTopLeftRadius: 40
+    },
+    title: {
+        marginBottom: 38,
     }
 });
